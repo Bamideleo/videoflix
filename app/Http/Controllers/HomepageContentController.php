@@ -70,4 +70,12 @@ class HomepageContentController extends BaseController
 
         return $this->success(['lists' => $lists], 200, $options);
     }
+<<<<<<< HEAD
+=======
+
+    public function get_frontend_data(){
+        
+      return view('channel.frontend');
+    }
+>>>>>>> 7e4bef5fee4e50bddb16707f63cdd1fa3b9242b0
 }

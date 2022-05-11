@@ -47,4 +47,12 @@ class HomeController extends BaseController {
 
         return response($view);
 	}
+<<<<<<< HEAD
+=======
+
+    public function get_frontend_data(Request $request){
+        
+        echo 'working';
+    }
+>>>>>>> 7e4bef5fee4e50bddb16707f63cdd1fa3b9242b0
 }

@@ -32,6 +32,13 @@ class ListController extends BaseController
         $this->list = $list;
     }
 
+<<<<<<< HEAD
+=======
+    public function ddd()
+    {
+      echo 'working';
+    }
+>>>>>>> 7e4bef5fee4e50bddb16707f63cdd1fa3b9242b0
     public function index()
     {
         $this->authorize('index', [ListModel::class, Auth::id()]);
