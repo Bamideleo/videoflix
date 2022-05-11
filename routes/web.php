@@ -132,8 +132,8 @@ Route::get('lists/{id}', 'ListController@show')->middleware('prerenderIfCrawler'
 
 // CATCH ALL ROUTES AND REDIRECT TO HOME
 Route::get('{all}', $homeController)->where('all', '.*');
-<<<<<<< HEAD
-=======
+// <<<<<<< HEAD
+// =======
 
 // Route::get('frontend', 'HomepageContentController@get_frontend_data');
->>>>>>> 7e4bef5fee4e50bddb16707f63cdd1fa3b9242b0
+// >>>>>>> 7e4bef5fee4e50bddb16707f63cdd1fa3b9242b0

@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 <?php
 
 namespace Common\Core;
-=======
-<?php namespace Common\Core;
->>>>>>> 7e4bef5fee4e50bddb16707f63cdd1fa3b9242b0
 
 use App\User;
 use Arr;
@@ -55,11 +51,7 @@ class BaseController extends Controller
     public function success($data = [], $status = 200, $options = [])
     {
         $data = $data ?: [];
-<<<<<<< HEAD
         if (!Arr::get($data, 'status')) {
-=======
-        if ( ! Arr::get($data, 'status')) {
->>>>>>> 7e4bef5fee4e50bddb16707f63cdd1fa3b9242b0
             $data['status'] = 'success';
         }
 
@@ -68,11 +60,7 @@ class BaseController extends Controller
             return $response;
         }
 
-<<<<<<< HEAD
         foreach ($data as $key => $value) {
-=======
-        foreach($data as $key => $value) {
->>>>>>> 7e4bef5fee4e50bddb16707f63cdd1fa3b9242b0
             if ($value instanceof Arrayable) {
                 $data[$key] = $value->toArray();
             }

@@ -1,4 +1,6 @@
-<?php namespace Common\Core\Controllers;
+<?php
+
+namespace Common\Core\Controllers;
 
 use Common\Core\AppUrl;
 use Common\Core\BaseController;
@@ -7,7 +9,8 @@ use Common\Settings\Settings;
 use Illuminate\Http\Response;
 use Illuminate\View\View;
 
-class HomeController extends BaseController {
+class HomeController extends BaseController
+{
 
     /**
      * @var BootstrapData
@@ -25,34 +28,31 @@ class HomeController extends BaseController {
         $this->settings = $settings;
     }
 
-	public function show()
-	{
-	    // only get meta tags if we're actually
+    public function show()
+    {
+        // only get meta tags if we're actually
         // rendering homepage and not a fallback route
         $data = [];
-	    if (request()->path() === '/' && $response = $this->handleSeo($data)) {
+        if (request()->path() === '/' && $response = $this->handleSeo($data)) {
             return $response;
         }
 
-	    $view = view('app')
+        $view = view('app')
             ->with('bootstrapData', $this->bootstrapData->init())
             ->with('htmlBaseUri', app(AppUrl::class)->htmlBaseUri)
             ->with('settings', $this->settings)
             ->with('customHtmlPath', public_path('storage/custom-code/custom-html.html'))
             ->with('customCssPath', public_path('storage/custom-code/custom-styles.css'));
 
-	    if (isset($data['seo'])) {
-	        $view->with('meta', $data['seo']);
+        if (isset($data['seo'])) {
+            $view->with('meta', $data['seo']);
         }
 
         return response($view);
-	}
-<<<<<<< HEAD
-=======
-
-    public function get_frontend_data(Request $request){
-        
-        echo 'working';
     }
->>>>>>> 7e4bef5fee4e50bddb16707f63cdd1fa3b9242b0
+
+    public function get_frontend_data(Request $request)
+    {
+        echo 'it is working';
+    }
 }

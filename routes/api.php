@@ -15,7 +15,7 @@ use App\Http\Controllers\UserProfileController;
 use Common\Auth\Controllers\GetAccessTokenController;
 use Common\Auth\Controllers\RegisterController;
 
-<<<<<<< HEAD
+// <<<<<<< HEAD
 Route::group(['prefix' => 'v1'], function () {
     Route::group(['middleware' => 'auth:sanctum'], function () {
 
@@ -75,7 +75,7 @@ Route::group(['prefix' => 'v1'], function () {
     Route::get('auth/social/{provider}/callback', '\Common\Auth\Controllers\SocialAuthController@loginCallback');
     Route::post('auth/password/email', '\Common\Auth\Controllers\SendPasswordResetEmailController@sendResetLinkEmail');
 });
-=======
+// =======
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -145,4 +145,4 @@ Route::group(['prefix' => 'v1'], function () {
 //     Route::get('auth/social/{provider}/callback', '\Common\Auth\Controllers\SocialAuthController@loginCallback');
 //     Route::post('auth/password/email', '\Common\Auth\Controllers\SendPasswordResetEmailController@sendResetLinkEmail');
 // });
->>>>>>> 7e4bef5fee4e50bddb16707f63cdd1fa3b9242b0
+// >>>>>>> 7e4bef5fee4e50bddb16707f63cdd1fa3b9242b0
